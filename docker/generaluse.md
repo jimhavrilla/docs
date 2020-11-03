@@ -54,11 +54,12 @@ So, the `docker run` command is one that is not broken down enough.  To create a
 docker run -d --rm -p 5000:5004 simpledocker
 ```
 
-Now, let's break it down:
+Now, let's break down the important flags:
 - `-d` flag detaches the image
 - `it` lets you go inside the image so you can interact with it (kind of the opposite of `-d`)
 - `--rm` removes the container automatically when it is killed, fails, or stops
 - `-p` sets the port, this confuses many people.  It goes `p externalport:internalport` so in my command you will be able to see the "Hello World!" message in your `localhost:5000`, and uses port `5004` inside the docker container. So you can tell flask to run in any port.  My `app.py` sample script uses port `5004` for no particular reason.  You can change that to `4001`, `7777`, whatever you like and if you still want to view it at `localhost:5000` the `-p` command is `5004:4001`, `5004:7777` etc.
+- `-v` you can add this to mount a volume to docker like `-v /somewhereIhaveHUGEdata:/code` if you want a folder to be accessible inside the container's workdir for example, but not built into the image (which is good practice)
 - lastly, you type the name of the image you wish to run as a container, in this case, `simpledocker`
 
 ## Examining your containers, stopping them, and cleaning up
