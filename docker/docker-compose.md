@@ -2,6 +2,8 @@
 
 So to add a layer of complexity, let's talk about `docker-compose`.  `docker-compose` allows you to use more than one docker container at once for a joint task.  The case I'll discuss here is setting up a search engine using `elasticsearch` (I won't go over how to set up indices, that's very case-by-case).
 
+The `Dockerfile` set up is basically identical to how it was done in the first tutorial, so you can pretty much reuse it.
+
 For example, here's what I set up for a web server I did recently with `elasticsearch` in a `docker-compose.yml` file with comments:
 
 ```
