@@ -2,6 +2,8 @@
 
 Let's start with making a small Flask app, as a really simple use case of `docker`. Let's clone a [really simplistic Flask app](https://github.com/jimhavrilla/simpleflaskdocker). You can use this to have something to run continuously out of the docker container.
 
+`git clone https://github.com/jimhavrilla/simpleflaskdocker.git` or `git clone git@github.com:jimhavrilla/simpleflaskdocker.git` depending on your setup.
+
 ## Breaking down the Dockerfile 
 
 Now you have an app that is really small and just prints "Hello world!" Let's break down a `Dockerfile`. I prefer something like this:
