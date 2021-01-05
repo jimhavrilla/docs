@@ -29,9 +29,9 @@ ENV FLASK_APP app.py
 ENV FLASK_RUN_HOST 0.0.0.0
 # copies the current directory to our Workdir
 COPY . /code
-# runs a very small script that contains something like "python app.py"
-RUN chmod +x /code/app_init.sh
-ENTRYPOINT sh /code/app_init.sh
+# works on windows and unix
+ENTRYPOINT ["python"]
+CMD ["app.py"]
 ```
 
 It can be a lot to digest at first, but knowing what to put in your Dockerfile is essential to how you build your image.  One piece of advice is to have all the code you use to actually make the image in a separate folder if you're planning on putting several files in the image.  Best practices tell you to mount with `-v` or `--mount`, but sometimes you may need to internalize the data in the image if you are less familiar with the code and how to mount data into it.
