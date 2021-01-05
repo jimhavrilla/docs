@@ -2,16 +2,16 @@
 
 So to add a layer of complexity, let's talk about `docker-compose`.  `docker-compose` allows you to use more than one docker container at once for a joint task.  The case I'll discuss here is setting up a search engine using `elasticsearch` (I won't go over how to set up indices, that's very case-by-case).
 
-The `Dockerfile` set up is basically identical to how it was done in the first tutorial, so you can pretty much reuse it.
+The `Dockerfile` set up is identical to how it was done in the [first tutorial](https://github.com/jimhavrilla/docs/edit/master/docker/generaluse.md), so you can pretty much reuse it.  Don't forget to clone the [simpleflaskdocker](https://github.com/jimhavrilla/simpleflaskdocker) repo: `git clone https://github.com/jimhavrilla/simpleflaskdocker.git` or `git clone git@github.com:jimhavrilla/simpleflaskdocker.git` depending on your setup.
 
-Before running anything make sure to run (and have Python 3.7+ or miniconda3 installed):
+Before running anything make sure to run (and have `Python 3.7+` or `miniconda3` installed):
 
 ```
 docker pull docker.elastic.co/elasticsearch/elasticsearch:7.8.1
 pip install elasticsearch
 ```
 
-It took about 33 seconds on my Macbook Pro 2015 on Wi-Fi.  Hopefully it's as fast for you!
+It took `~33 seconds` on my Macbook Pro 2015 on Wi-Fi.  Hopefully it's as fast for you!
 
 
 For example, here's what I set up for a web server I did recently with `elasticsearch` in a `docker-compose.yml` file with comments. 
