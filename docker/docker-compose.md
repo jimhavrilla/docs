@@ -4,7 +4,10 @@ So to add a layer of complexity, let's talk about `docker-compose`.  `docker-com
 
 The `Dockerfile` set up is basically identical to how it was done in the first tutorial, so you can pretty much reuse it.
 
-For example, here's what I set up for a web server I did recently with `elasticsearch` in a `docker-compose.yml` file with comments:
+Before running anything make sure to run `docker pull docker.elastic.co/elasticsearch/elasticsearch:7.8.1` took about 33 seconds on my Macbook Pro 2015 on Wi-Fi.  Hopefully it's as fast for you!
+
+
+For example, here's what I set up for a web server I did recently with `elasticsearch` in a `docker-compose.yml` file with comments. 
 
 ```
 version: '3.5' # docker-compose version (actually important here)
