@@ -169,3 +169,11 @@ docker system prune
 ```
 
 Which will remove all stopped containers and untagged images.
+
+If you would like to push your work to a repo, simply do:
+
+```
+docker login -u username -p password
+docker tag simpledocker reponame/simpledocker # for the wanglab, this is genomicslab/simpledocker
+docker push reponame/simpledocker # for the wanglab, genomicslab/simpledocker
+```
